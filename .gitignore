@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+
+#Logs
+*.log
+
+# Nuget
+packages/
+
+# Publish
+publish/
+
+# OS
+.DS_Store
+Thumbs.db
