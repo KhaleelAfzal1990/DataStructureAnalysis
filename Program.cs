@@ -12,6 +12,13 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton<ArrayOperations>(sp => new ArrayOperations(15));
 builder.Services.AddSingleton<StudentManager>();
 
+// Register all services
+builder.Services.AddSingleton<FactorialService>();
+builder.Services.AddSingleton<MultiplicationService>();
+builder.Services.AddSingleton<TimingService>();
+builder.Services.AddSingleton<BigOAnalysisService>();
+
+
 // -------- Swagger services --------
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
