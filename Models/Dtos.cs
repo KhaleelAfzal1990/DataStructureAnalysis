@@ -13,7 +13,8 @@ namespace DSALabsApi.Models
         public static ApiResponse<T> Fail(string message) =>
             new() { Success = false, Message = message, Data = default };
     }
-
+ // Request DTOs
+    public class ValueRequest { public int Value { get; set; } }
     public class NumberRequest {public long N {get;set;}}
     public class TwoNumbersRequest {
         public long A {get; set;}

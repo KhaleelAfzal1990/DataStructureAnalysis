@@ -18,6 +18,11 @@ builder.Services.AddSingleton<MultiplicationService>();
 builder.Services.AddSingleton<TimingService>();
 builder.Services.AddSingleton<BigOAnalysisService>();
 
+// Register the three linked-list services as Singletons so their
+// state persists across HTTP requests.
+builder.Services.AddSingleton<SinglyLinkedList>();
+builder.Services.AddSingleton<DoublyLinkedList>();
+builder.Services.AddSingleton<CircularLinkedList>();
 
 // -------- Swagger services --------
 builder.Services.AddEndpointsApiExplorer();
