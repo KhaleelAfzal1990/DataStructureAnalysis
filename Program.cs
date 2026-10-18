@@ -24,6 +24,10 @@ builder.Services.AddSingleton<SinglyLinkedList>();
 builder.Services.AddSingleton<DoublyLinkedList>();
 builder.Services.AddSingleton<CircularLinkedList>();
 
+//sort services
+builder.Services.AddSingleton<SortService>();
+builder.Services.AddSingleton<StudentSortService>();
+
 // -------- Swagger services --------
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -64,7 +64,29 @@ namespace DSALabsApi.Models
         public int OldRollNumber { get; set; }
         public int NewRollNumber { get; set; }
     }
+    public class SortRequest
+    {
+        public int[] Array { get; set; } = System.Array.Empty<int>();
+        public bool Descending { get; set; } = false;
+    }
 
+    // Result object to capture the stats required by the lab
+    public class SortResult<T>
+    {
+        public T[] SortedArray { get; set; } = System.Array.Empty<T>();
+        public int Comparisons { get; set; }
+        public int Swaps { get; set; }       // Used by Bubble Sort
+        public int Shifts { get; set; }      // Used by Insertion Sort
+        public int Passes { get; set; }
+    }
+
+    public class Student
+    {
+        public int RollNo { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public int Marks { get; set; }
+    }
+    
     public class DeleteStudentRequest { public int RollNumber { get; set; }
 
     }
