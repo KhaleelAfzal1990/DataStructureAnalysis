@@ -14,6 +14,12 @@ namespace DSALabsApi.Models
             new() { Success = false, Message = message, Data = default };
     }
  // Request DTOs
+     public class ArrayRequest { public int[] Arr { get; set; } = System.Array.Empty<int>(); }
+    
+    public class StringRequest { public string Text { get; set; } = string.Empty; }
+    
+    public class IntRequest { public int N { get; set; } }
+    
     public class ValueRequest { public int Value { get; set; } }
     public class NumberRequest {public long N {get;set;}}
     public class TwoNumbersRequest {
@@ -78,6 +84,9 @@ namespace DSALabsApi.Models
         public int Swaps { get; set; }       // Used by Bubble Sort
         public int Shifts { get; set; }      // Used by Insertion Sort
         public int Passes { get; set; }
+
+        public int SwapsOrShifts { get; set; }
+        public List<string> PassLogs { get; set; } = new();
     }
 
     public class Student

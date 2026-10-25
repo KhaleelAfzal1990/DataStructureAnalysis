@@ -28,6 +28,12 @@ builder.Services.AddSingleton<CircularLinkedList>();
 builder.Services.AddSingleton<SortService>();
 builder.Services.AddSingleton<StudentSortService>();
 
+builder.Services.AddSingleton<RecursionService>();
+builder.Services.AddSingleton<SelectionSortService>();
+builder.Services.AddSingleton<MergeSortService>();
+builder.Services.AddSingleton<PerformanceService>();
+builder.Services.AddSingleton<StableSortService>();
+
 // -------- Swagger services --------
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
